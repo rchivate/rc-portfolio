@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Riya Chivate's Portfolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
-<nav class="navbar">
-        <a class="button" href="index.html">Home</a>
-        <a class="button" href="projects.html">Projects</a>
-        <a class="button" href="blog.html">Blog</a>
-</nav>
+
+
 <body>
-        <h1>BLOG</h1>
-
-     
     
-        <div class="container">
+<!-- Navbar loads here -->
+<nav id="nav-placeholder"></nav>
 
-    <h1>Context is important in Data Science</h1>
-    <p>Context matters heavily in Data Science. Data can be manipulated in many different ways which sometimes lead to misleading results. For example, the classic example of the relationship between Ice Cream sales and Shark Attacks at the beach. The raw data proved that an increase in Ice Cream sales can lead to higher rates of Shark Attacks. If you look closesly at these two variables, there is no research or evidence that is backing this statement. Just because there is correlation between two variables does not mean that there is causation in any way. This is a prime example of when context matters. The data was collected during the season of Summer. Obviously, more people will go to the beach during the summer, and most likely buy ice cream. Because there are more people at the beach, there will be more recorded shark attacks because there are people for the sharks to attack.</p>
-    <p>Modeling social topics and people are important in Data Science because they provide the necessary background and understanding to interpret data accurately and ethically. By keeping in mind the context of the data, we can ensure that our models are not only accurate but also fair and responsible. With great power comes great responsibility. Using data that are about real people helps us understand their situation in the context of the dataset. There are some measures that data scientists much ensure that they are taking to make sure that the people whose data is being used are not being harmed. For example, if there is a dataset with patients' data, the name and other sensitive data should not be available publicly. This is an invasion of privacy.</p>
-    <p>I am hoping to better understand how to ensure that the data is used ethically and some steps that are necessary to take before manipulating the data. I also want to learn how to manipulate data so that it best represents the situation and the context in which the data was taken from.</p>
-</div>
+<script>
+$(function () {
+    $("#nav-placeholder").load("navbar.html");
+});
+</script>
+
+    <h1>BLOG</h1>
+
+
+
+    <div class="blog-container">
+
+        <h1>Context is important in Data Science</h1>
+        <p>Context matters heavily in Data Science. Data can be manipulated in many different ways which sometimes lead
+            to misleading results. For example, the classic example of the relationship between Ice Cream sales and
+            Shark Attacks at the beach. The raw data proved that an increase in Ice Cream sales can lead to higher rates
+            of Shark Attacks. If you look closesly at these two variables, there is no research or evidence that is
+            backing this statement. Just because there is correlation between two variables does not mean that there is
+            causation in any way. This is a prime example of when context matters. The data was collected during the
+            season of Summer. Obviously, more people will go to the beach during the summer, and most likely buy ice
+            cream. Because there are more people at the beach, there will be more recorded shark attacks because there
+            are people for the sharks to attack.</p>
+        <p>Modeling social topics and people are important in Data Science because they provide the necessary background
+            and understanding to interpret data accurately and ethically. By keeping in mind the context of the data, we
+            can ensure that our models are not only accurate but also fair and responsible. With great power comes great
+            responsibility. Using data that are about real people helps us understand their situation in the context of
+            the dataset. There are some measures that data scientists much ensure that they are taking to make sure that
+            the people whose data is being used are not being harmed. For example, if there is a dataset with patients'
+            data, the name and other sensitive data should not be available publicly. This is an invasion of privacy.
+        </p>
+        <p>I am hoping to better understand how to ensure that the data is used ethically and some steps that are
+            necessary to take before manipulating the data. I also want to learn how to manipulate data so that it best
+            represents the situation and the context in which the data was taken from.</p>
+    </div>
     <script src="script.js"></script> <!-- Link to JS file -->
 </body>
+
 </html>

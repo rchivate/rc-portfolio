@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Riya Chivate's Portfolio</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
-<nav class="navbar">
-        <a class="button" href="index.html">Home</a>
-        <a class="button" href="projects.html">Projects</a>
-        <a class="button" href="blog.html">Blog</a>
-</nav>
+
+
 <body>
-        <h1>Projects</h1>
+    
+<!-- Navbar loads here -->
+<nav id="nav-placeholder"></nav>
 
-    <div class="container">
+<script>
+$(function () {
+    $("#nav-placeholder").load("navbar.html");
+});
+</script>
 
-    <h1>Project 1</h1>
-<p>[project 1 description here]</p>    
-</div>
+    <h1>Projects</h1>
+    <div class="project-container">
+
+        <div class="individual-project-container">
+            <img src="https://placehold.co/200x250.png" alt="Project 1 Image" style="width:100%;height:auto;">
+            <h1>Project 1</h1>
+            <p>[project 1 description here]</p>
+        </div>
+
+        <div class="individual-project-container">
+            <img src="https://placehold.co/200x250.png" alt="Project 2 Image" style="width:100%;height:auto;">
+            <h1>Project 2</h1>
+            <p>[project 2 description here]</p>
+        </div>
+
+        <div class="individual-project-container">
+            <img src="https://placehold.co/200x250.png" alt="Project 3 Image" style="width:100%;height:auto;">
+            <h1>Project 3</h1>
+            <p>[project 3 description here]</p>
+        </div>
+
+        <div class="individual-project-container">
+            <img src="https://placehold.co/200x250.png" alt="Project 4 Image" style="width:100%;height:auto;">
+            <h1>Project 4</h1>
+            <p>[project 4 description here]</p>
+        </div>
+
+
+
+
+
+
+
+    </div>
     <script src="script.js"></script> <!-- Link to JS file -->
 </body>
+
 </html>
