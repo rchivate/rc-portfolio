@@ -110,8 +110,9 @@ p {
 /* --- Blog CSS --- */
 .blog-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
+    margin-top: 20px;
     /* Centers the container horizontally */
     padding: 20px;
     background: #fff;
