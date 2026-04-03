@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Riya Chivate's Portfolio</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- Link to CSS file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+
+<body>
+    
+<!-- Navbar loads here -->
+<nav id="nav-placeholder"></nav>
+
+<script>
+$(function () {
+    $("#nav-placeholder").load("project-navbar.html");
+});
+</script>
+
+
+
+
+    <h1>Project 2- Titanic </h1>
+    <div class="container">
+        <h1>A Comparative Analysis of Match Outcomes for India and Pakistan in Asia Cup History</h1>
+
+        <p>Visit the <a href="https://github.com/rchivate/DTSC_2301_2302/tree/main/Cricket%20Asia%20Cup">GitHub Repository</a> for the code</p>
+
+    <h2>Problem Definition</h2>
+    <p>
+        Historically, the rivalry between the Indian and the Pakistani cricket teams has always been prevalent. 
+        This competition is also highlighted throughout the Asia Cup. Asia Cup is a tournament that includes 
+        several teams that represent different countries in the continent of Asia.
+    </p>
+
+    <p>
+        One of the most important actions that a captain of a cricket team makes is the coin toss. The coin toss 
+        can help set up the framework for the match. If won, the captain is able to make the decision of batting 
+        or bowling first. This decision is strategically important based on the strengths and weaknesses of the 
+        two teams. Usually the tension between the two teams starts here.
+    </p>
+
+    <p>
+        This project aims to determine: <strong>To what extent does winning the toss influence the final match 
+        outcome for the two historically rival teams: India and Pakistan?</strong> Furthermore, I explore whether 
+        the decision made (voluntarily or involuntarily) has a visible impact on the final outcome of the match.
+    </p>
+
+    <p>
+        This relationship between the decision made after the coin toss and the result of the match provides 
+        fans and sports analysts with data to back up claims. These claims can range from whether the coin toss, 
+        associated with luck, is a determining factor in the outcome of the specific match, and how significant 
+        the coin toss is to the outcome.
+    </p>
+
+    <p>
+        Because India and Pakistan are historically rivals when it comes to cricket, it is interesting to understand 
+        if something as trivial as a coin flip can set up the team for success or failure. The analysis of historical 
+        data can also form the basis for claims that fans make about team performance.
+    </p>
+
+    <h2>Data Description</h2>
+    <p>
+        This dataset from Kaggle contains data about each individual match played in the Asia Cup between 
+        1984 and 2022.
+    </p>
+
+    <p>
+        Each row of the dataset represents an individual match. Each team gets its own row, meaning there are 
+        duplicates for matches. The difference between the two rows is the perspective. For example, in a game 
+        between India and Pakistan, one row reflects India’s statistics (opponent: Pakistan) and the other reflects 
+        Pakistan’s statistics (opponent: India).
+    </p>
+
+    <p>
+        The key columns used in this research are <strong>Team</strong>, <strong>Toss</strong>, 
+        <strong>Selection</strong>, and <strong>Result</strong>. These are essential because they directly 
+        address the relationship between winning the toss, the post-toss decision, and the final match outcome.
+    </p>
+
+    <p>
+        The dataset contains 250 rows and 20 columns, which can be interpreted as 250 team-match entries 
+        with 20 data points per entry. Due to the dataset’s size and scope, the analysis focuses only on 
+        India and Pakistan.
+    </p>
+
+    <p>
+        After filtering, India had 57 rows (matches) and Pakistan had 54 rows (matches). Since these numbers 
+        are relatively close, there is no significant imbalance in sample size between the two teams.
+    </p>
+
+    <p>
+        While the dataset provides detailed match information, additional data such as time of day, team rankings, 
+        and dew factor could improve accuracy. Dew can influence ball behavior and significantly impact 
+        bowling performance.
+    </p>
+
+    <p>
+        The dataset also assumes fair weather conditions and consistent rules across years. However, match 
+        conditions and regulations may vary, potentially influencing outcomes.
+    </p>
+
+    <h2>Data Cleaning &amp; Preparation</h2>
+    <p>
+        Several cleaning steps were performed to ensure clarity and consistency.
+    </p>
+
+    <ul>
+        <li>Standardized the <strong>Result</strong> and <strong>Toss</strong> columns to lowercase.</li>
+        <li>Converted “win” and “lose” values to 1 and 0 for numerical analysis.</li>
+        <li>Filtered out “no result” and null rows.</li>
+        <li>Created separate datasets for India and Pakistan.</li>
+        <li>Grouped “win” and “win d/l” together for consistency.</li>
+    </ul>
+
+    <p>
+        Using numerical values allowed calculation of the mean, where a value above 0.5 indicates a majority 
+        winning percentage under a specific condition.
+    </p>
+
+    <h2>Data Understanding and Visualization</h2>
+    <image src="./asiacup-images/india-one.png" alt="Heatmap of Toss Outcome vs. Match Result" style="width:100%;height:auto;"></image>
+    <h3>India</h3>
+    <p>
+        The bar plot for India shows a higher percentage of wins when the team wins the toss. 
+        A mean greater than 0.5 indicates a strong winning tendency under that condition.
+    </p>
+
+        <image src="./asiacup-images/india-one.png" alt="Heatmap of Toss Outcome vs. Match Result" style="width:100%;height:auto;"></image>
+
+    <images src="./asiacup-images/2-pak.png" alt="Heatmap of Toss Outcome vs. Match " style="width:100%;height:auto;"></images>
+    <h3>Pakistan</h3>
+    <p>
+        Pakistan’s analysis shows that the toss does not significantly affect overall outcomes, 
+        with only a 0.4 difference observed. This suggests that Pakistan’s performance is less influenced by toss outcomes compared to India.
+    </p>
+
+    <p>
+        Heatmaps and bar charts illustrate the relationship between toss outcome, selection choice, 
+        and win percentage. For India, winning the toss clearly increases winning probability. 
+        Pakistan does not display as strong a pattern.
+    </p>
+    <image src="./asiacup-images/3-both.png" alt="Heatmap of Toss Outcome vs. Match Result" style="width:100%;height:auto;"></image>
+    
+    <p>
+        In both teams, bowling first is associated with slightly higher win percentages compared to batting first.
+    </p>
+
+    <h2>Storytelling &amp; Interpretation</h2>
+    <p>
+        The data reveals an intriguing interplay between strategy and luck. Winning the toss significantly 
+        increases India's chances of winning, suggesting strong strategic utilization of the advantage. 
+        Pakistan’s outcomes appear less dependent on toss results, indicating performance may rely more 
+        on in-game execution.
+    </p>
+
+    <p>
+        However, correlation does not imply causation. Winning the toss does not guarantee victory. 
+        Opponent strength and match context also influence outcomes.
+    </p>
+
+    <h2>Limitations, Ethics, &amp; Reflection</h2>
+    <ul>
+        <li>Lack of environmental factors (dew, pitch type).</li>
+        <li>No team rankings or player availability data.</li>
+        <li>Limited only to Asia Cup matches.</li>
+        <li>Potential misuse in sports betting contexts.</li>
+    </ul>
+
+    <p>
+        If extended, future work could integrate weather data to evaluate time-of-day effects 
+        on toss advantage.
+    </p>
+
+    
+
+    <h2>References &amp; AI Use Transparency</h2>
+    <p>
+        Dataset Source: 
+        <a href="https://www.kaggle.com/datasets/hasibalmuzdadid/asia-cup-cricket-1984-to-2022" target="_blank">
+            Kaggle Asia Cup Dataset (1984–2022)
+        </a>
+    </p>
+
+    <p><i>
+        Generative AI was used to assist in formatting and generating HTML from a Google document 
+        that was originally hand-typed.</p><i>
+    </p>
+        
+        
+
+        
+
+
+
+
+
+
+
+
+    </div>
+    <script src="script.js"></script> <!-- Link to JS file -->
+</body>
+
+</html>
